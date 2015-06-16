@@ -18,8 +18,8 @@ install:
   - ls -lar
   - cd -
 
-scripts:
-  - ./gradlew build
+script:
+  - exit 1
 
 before_install:
  - chmod +x gradlew
