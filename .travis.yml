@@ -18,7 +18,8 @@ install:
   - cd -
 
 scripts:
-  - SONARHOME=/tmp/sonarqube ./gradlew build
+  - SONARHOME=/tmp/sonarqube 
+  - ./gradlew build
 
 before_install:
  - chmod +x gradlew
