@@ -18,7 +18,7 @@ install:
   - cd -
 
 scripts:
-  - SONARHOME=/tmp/sonarqube ./gradlew build integTest functionalTest
+  - SONARHOME=/tmp/sonarqube ./gradlew build
 
 before_install:
  - chmod +x gradlew
