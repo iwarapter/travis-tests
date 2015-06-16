@@ -4,6 +4,6 @@ println System.getenv('SONARHOME')
 
 import groovy.io.FileType
 
-new File(System.getenv('SONARHOME')).eachFileRecurse (FileType.FILES) { file ->
+new File('/tmp/sonarqube').eachFileRecurse (FileType.FILES) { file ->
   println file
 }
