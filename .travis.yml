@@ -18,6 +18,7 @@ install:
   - cd -
 
 scripts:
+  - ls -lar $SONARHOME
   - ./gradlew build
 
 before_install:
