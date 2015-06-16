@@ -1,9 +1,3 @@
 apply plugin: 'java'
 
 println System.getenv('SONARHOME')
-
-import groovy.io.FileType
-
-new File('/tmp/sonarqube').eachFileRecurse (FileType.FILES) { file ->
-  println file
-}
