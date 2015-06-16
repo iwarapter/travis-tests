@@ -4,9 +4,9 @@ jdk:
   - oraclejdk7
 
 env:
-  - PATH=$PATH:/tmp/sonar-runner-2.4/bin SONAR_DL=http://downloads.sonarsource.com/sonarqube/sonarqube-4.5.4.zip
-  - PATH=$PATH:/tmp/sonar-runner-2.4/bin SONAR_DL=http://downloads.sonarsource.com/sonarqube/sonarqube-5.0.1.zip
-  - PATH=$PATH:/tmp/sonar-runner-2.4/bin SONAR_DL=http://downloads.sonarsource.com/sonarqube/sonarqube-5.1.1.zip
+  - PATH=$PATH:/tmp/sonar-runner-2.4/bin SONAR_DL=http://downloads.sonarsource.com/sonarqube/sonarqube-4.5.4.zip SONARHOME=/tmp/sonarqube 
+  - PATH=$PATH:/tmp/sonar-runner-2.4/bin SONAR_DL=http://downloads.sonarsource.com/sonarqube/sonarqube-5.0.1.zip SONARHOME=/tmp/sonarqube 
+  - PATH=$PATH:/tmp/sonar-runner-2.4/bin SONAR_DL=http://downloads.sonarsource.com/sonarqube/sonarqube-5.1.1.zip SONARHOME=/tmp/sonarqube 
 
 install:
   - cd /tmp
@@ -18,7 +18,6 @@ install:
   - cd -
 
 scripts:
-  - SONARHOME=/tmp/sonarqube 
   - ./gradlew build
 
 before_install:
